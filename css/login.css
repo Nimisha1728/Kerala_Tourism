@@ -3,7 +3,7 @@ body{
 }
 .container
 {
-    background:url("/images/img9.jpg") 
+    background:url("../images/img9.jpg") 
     center; 
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +127,7 @@ body{
     font-size: 70px; 
     position: relative;
     left: 30px;
-    background-image: url("/images/bg1.jfif");
+    background-image: url("../images/bg1.jfif");
     background-repeat: no-repeat;
     background-size: cover;
 }

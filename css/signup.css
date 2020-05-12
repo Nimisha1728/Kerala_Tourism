@@ -33,22 +33,16 @@ body {
          
          
           background: linear-gradient(#eeeeee, #f68f8f);   
-          /* width: 100%;
-          max-width: 400px;
-          padding: 25px 25px 30px;
          
-          box-shadow: 0px 1px 4px 0px rgba(0,0,0,1);
-          border-top-right-radius: 50px;
-          border-bottom-left-radius: 50px; */
          
 }
 .right-section {
   flex: 1;
   background: linear-gradient(to right, #f50629 0%, #fd9d08 100%);
   transition: 1s;
-  /* background-image: url("/images/sitadevi.jpg"); */
-  background-image: url("/images/right.gif");
-  /* background-image: url("https://4.bp.blogspot.com/-_duRHQx41IE/VVdU8zYxHhI/AAAAAAAAOro/VkwBgCYQ7UY/s1600/gif%2B12.gif"); */
+ 
+  background-image: url("../images/right.gif");
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
