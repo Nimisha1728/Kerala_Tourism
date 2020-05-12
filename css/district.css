@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding:0;
+}
+header {
+    position: relative;
+   
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .nav 
+ {
+  
+  float: right;
+}
+.nav a
+{  
+    
+    margin-top: 25px;
+   
+    margin-right: 8px;
+    font-size: 20px;
+   
+    color:white;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+.nav a:hover
+{
+  color: rgb(192, 50, 205);
+  text-decoration: none;
+}
+
+
+
+
+
+.heading
+{ 
+    color : #9f00a7;
+    font-family: "Tangerine", serif; 
+    font-weight: bold; 
+    font-size: 70px; 
+    position: relative;
+    left: 30px;
+} 
+
+
+
+  
+.slideshow
+{ 
+   
+   
+  margin-top:80px;
+    height: 700px;
+   
+    background-image: url("/images/bg1.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-sizing: border-box;
+}
+.content
+{
+    margin: auto;
+    width: 190px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 150px;
+    
+}
+.content-carousel
+{
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rotar 15s infinite linear;
+    transform-style: preserve-3d;
+}
+.content-carousel:hover
+{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.content-carousel figure
+{
+     width: 100%;
+     height:120px;
+     border: 1px solid #4d444d;
+     overflow: hidden;
+     position: absolute;
+}
+.content-carousel figure:nth-child(1)
+{
+    transform: rotateY(0deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(2)
+{
+    transform: rotateY(25.7deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(3)
+{
+    transform: rotateY(51.4deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(4)
+{
+    transform: rotateY(77.1deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(5)
+{
+    transform: rotateY(102.8deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(6)
+{
+    transform: rotateY(128.5deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(7)
+{
+    transform: rotateY(154.2deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(8)
+{
+    transform: rotateY(179.9deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(9)
+{
+    transform: rotateY(205.6deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(10)
+{
+    transform: rotateY(231.3deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(11)
+{
+    transform: rotateY(257deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(12)
+{
+    transform: rotateY(282.7deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(13)
+{
+    transform: rotateY(308.4deg) translateZ(550px);
+}
+.content-carousel figure:nth-child(14)
+{
+    transform: rotateY(334.1deg) translateZ(550px);
+}
+.shadow
+{
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 2px;
+
+}
+.content-carousel img{
+    image-rendering: auto;
+    transition: all 300ms;
+    width:100%;
+    height: 100%;
+}
+.content-carousel img:hover
+{
+    transform: scale(1.2);
+    transition: all 300ms;
+
+}
+@keyframes rotar
+{
+    from{
+        transform:rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+
+    }
+}
+.dist
+{
+   margin:-70px;
+    padding-left:360px;
+    color: rgb(236, 58, 117);
+    /* font-style: italic; */
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:red;
+  }
+
+ 
+#para
+{
+    margin-top:310px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:20px;
+    text-align: center;
+}
+#h3a
+{
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+   
+}
+.footer
+{
+    padding-top:-15px;
+    background-color: greenyellow;
+    height:1.5em;
+    margin-top: 2%;
+    color:white;
+}
+
+.sidebar
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: darkblue;
+  padding-top: 5%;
+  padding-left: 30%;
+  font-size: 20px;
+ 
+
+}
+.sidebar li{
+    list-style:none;
+   
+    
+}
+    
+li::before
+{
+    content: "\1F5F8";
+    
+    margin-right: 10px;
+}
+
+
+
+
+video#bgVideo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; 
+   }
+   
+   @media only screen and (max-width: 768px) {
+    video {
+      display:none;
+    }
+    body{
+      background-image:url(“img8.jpg”);
+    }
+   }
+   

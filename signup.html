@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+    
+  <div class="container">
+    <div class="left-section">
+      <div class="header">
+        <h1 class="animation a1 ml3">Welcome !!!</h1>
+        
+      </div>
+    <div id="error"></div>
+    <div id="success"></div>
+    <form id="myForm" onsubmit="return validate()" action="login.html">
+      <div class="inputField floating">
+						
+        <input id="name"   type="text" placeholder="Name" class="form-field animation a3 floating__input">
+        <label  class="floating__label form-field animation a3" data-content="Name">
+        <span class="hidden--visually">
+          Name</span></label>
+          <span></span> 
+        </div>
+
+
+    <div class="inputField floating">
+      <input autocomplete="off" type="email" placeholder="Email" id="email" class="form-field animation a4 floating__input">
+      <label  class="floating__label form-field animation a4" data-content="Email">
+        <span class="hidden--visually">
+          Email</span></label>
+      <span></span>
+    </div>
+    
+    <div class="inputField floating">
+      <input type="text" placeholder="Number" id="number" class="form-field animation a5 floating__input">
+      <label  class="floating__label form-field animation a5" data-content="Number">
+        <span class="hidden--visually">
+          Number</span></label>
+      <span></span>
+    </div>
+    <div class="inputField floating">
+      <input type="password" placeholder="Password" id="pwd" class="form-field animation a6 floating__input">
+      <label  class="floating__label form-field animation a6" data-content="Password">
+        <span class="hidden--visually">
+          Password</span></label>
+      <span></span>
+      <div class="strength" id="length"></div>
+    </div>
+    <div class="inputField floating">
+      <input type="password" placeholder="Confirm Password" id="cPwd" class="form-field animation a7 floating__input">
+      <label  class="floating__label form-field animation a7" data-content="Confirm Password">
+        <span class="hidden--visually">
+          Confirm Password</span></label>
+      <span></span>
+        <p class="strength1" id="length1"></p>
+      </div><br><br>
+      <div class="btn">
+        <input type="submit" class="animation a8">
+      </div>
+    </form>
+  </div>
+  
+  <div class="right-section">
+     
+  </div>
+</div>
+
+<script >
+  function validate() {
+    //form validation
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('pwd').value;
+    const number = document.getElementById('number').value;
+    const cPassword = document.getElementById('cPwd').value;
+    const error = document.getElementById('error');
+    const success = document.getElementById('success');
+    let text;
+    
+    var regx = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    var regx1=/^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+    if(name=="") {
+      text = "Name cannot be blank";
+      error.style.padding = '10px';
+      error.innerHTML = text;
+      return false;
+    }
+   
+    // if(email.indexOf("@") == -1|| email.length < 6) {
+     if(!email.match(regx))
+     {
+      text = "Enter A Valid Email Address";
+      error.style.padding = '10px';
+      
+      error.innerHTML = text;
+      return false;
+    }
+    // if(number.length < 10 || isNaN(number)) {
+      if(!number.match(regx1)){
+      text = "Please Enter A Valid Number";
+      error.style.padding = '10px';
+      error.innerHTML = text;
+      return false;
+    }
+    if(password == '' || password.length < 8) {
+      text = "Please Enter Your Password (it must be 8 letters or more)";
+      error.style.padding = '10px';
+      error.innerHTML = text;
+      return false;
+    }
+    if(password != cPassword) {
+      text = "Your Password Do Not Match";
+      error.style.padding = '10px';
+      error.innerHTML = text;
+      return false;
+    }
+    success.style.padding = '10px';
+    success.innerHTML = 'Form Successfully Submitted';
+    return true;
+  }
+</script>
+<script>
+  //password strength checker
+  document.getElementById('pwd').addEventListener('keyup', function() {
+    strength();
+  })
+  function strength() {
+    const pass1 = document.getElementById('pwd').value;
+    const status = document.getElementById('length');
+    var counter = 0;
+    if(pass1 != '') {
+      //input text for password to change red
+      if(pass1.length <= 6 && pass1.match(/[a-zA_Z]+/))
+        counter = 1;
+      //input numbers for password to change orange
+      if(pass1.match(/[0-9]+/) && pass1.length > 6)
+        counter = 2;
+      //input special characters for password to change green
+      if(pass1.match(/[!@$#^&()*%]+/))
+        counter = 3;
+      //if text have been inputted
+      if(counter == 1) {
+        status.style.opacity = '1';
+        status.style.background = "#dc0303";
+        status.style.width = '35%';
+
+      }
+      //if numbers have been inputted
+      if(counter == 2) {
+        status.style.opacity = '1';
+        status.style.background = "orange";
+        status.style.width = '70%';
+      }
+      //if special characters have been inputted
+      if(counter == 3) {
+        status.style.opacity = '1';
+        status.style.background = "green";
+        status.style.width = '100%';
+      }
+    }
+    else {
+      status.style.opacity = '0';
+    }
+  }
+</script>
+
+<script>
+	var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+</body>
+</html>

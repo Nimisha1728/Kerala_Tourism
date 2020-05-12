@@ -1,0 +1,87 @@
+body{
+    background-image: url("/images/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image-responsive
+{
+    height: 100%;
+    width:100%;
+    
+}
+.heading
+{
+    color: maroon;
+}
+.para
+{
+    size: 20px;
+}
+
+.col-md-8 h1
+{   padding-top:60px;
+    color : #ec0b0bc7;
+    font-family: "Tangerine", serif; 
+    font-weight: bold; 
+    font-size: 70px; 
+    position: relative;
+    left: 30px;
+    
+} 
+.header
+{
+    /* background: white;   */
+   /* background-image: url("/images/alpybeach.jpg");
+    background-repeat: no-repeat;
+    background-size:cover ; */
+    width : 100%; 
+    height:20%;
+    position: fixed;
+    background-color: transparent;
+    z-index: 1000;
+
+}
+.header a
+{
+    color: rgb(100,100,100);
+    padding: 20px;
+    position: relative;
+   
+    top : 10px;
+    font-family: calibri, arial;
+    font-weight: 900; 
+    color: maroon;
+    font-size: 20px;
+ }
+#col-md-4
+{ 
+    height: 50px;
+    padding-left: 50px;
+    
+}
+.header a:hover
+{ 
+    transition-duration: 0.3s; 
+    color: purple; 
+    text-decoration: none;
+}
+.container
+{
+    padding-top:310px;;
+}
+
+#h3a
+{
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+   
+}
+.footer
+{
+    padding-top:-15px;
+    background-color: greenyellow;
+    height:1.5em;
+    margin-top: 2%;
+    color:white;
+}
