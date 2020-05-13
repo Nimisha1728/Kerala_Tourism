@@ -258,10 +258,8 @@ video#bgVideo {
    
    @media only screen and (max-width: 768px) {
     video {
-      display:none;
+      display: none;
     }
-    body{
-      background-image:url(“img8.jpg”);
-    }
+    
    }
    
